@@ -1,11 +1,11 @@
 ---
-title: "Proposal title"
-subtitle: "Proposal"
-author: 
-  - name: "Team Name - Team member 1, Team member 2,..."
+title: "Hubble-Muñoz Estimation"
+subtitle: "Project Proposal"
+author:
+  - name: "Karina Muñoz"
     affiliations:
       - name: "College of Information Science, University of Arizona"
-description: "Project description"
+description: "Using regression-based data mining to estimate the Hubble Constant (H₀) from astronomical galaxy data."
 format:
   html:
     code-tools: true
@@ -16,30 +16,63 @@ editor: visual
 code-annotations: hover
 execute:
   warning: false
+  message: false
 jupyter: python3
 ---
 
-```{python}
-#| label: load-pkgs
-#| message: false
-import numpy as np
-```
+## Overview
+
+This project explores the relationship between a galaxy’s recessional velocity and its distance from Earth to estimate the Hubble Constant (H₀). 
+The aim is to apply regression and visualization techniques from data mining to real astronomical data and compare the resulting H₀ estimate to accepted 
+cosmological values (~70 km/s/Mpc).  
+
+This topic was chosen because it bridges my astronomy background with the data-mining skills developed in INFO 523. 
+My self-taught component will be learning and applying linear regression to incorporate measurement uncertainty into the model.
+
+---
 
 ## Dataset
+
+
+The dataset used in this project contains observational data of nearby galaxies, including their recession velocities (km/s) and 
+distances (Mpc). It is sourced from publicly available astronomical catalogs, such as the 
+NASA/IPAC Extragalactic Database (NED) or curated datasets on Kaggle (Galaxy Distance–Velocity Data).  
+
+I chose this dataset because it provides direct, measurable quantities for verifying Hubble's law, which links galaxy velocity to 
+distance. It’s small enough for reproducible analysis (typically 200 galaxies), but still captures meaningful variation across galaxies.  
 
 ```{python}
 #| label: load-dataset
 #| message: false
-```
-
-A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
-
-Make sure to load the data and use inline code for some of this information.
+import pandas as pd
 
 ## Questions
 
-The two questions you want to answer.
+Can a linear regression model accurately reproduce Hubble’s Law from observed galaxy data?
+How does incorporating uncertainty (weighted regression) affect the estimated value of the Hubble Constant?
+
 
 ## Analysis plan
 
--   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+Week 1: Data cleaning and exploratory analysis — scatterplots, correlation checks.
+Week 2: Fit standrad linear regression model and compute slope/intercept.
+Week 3: Implement weighted regression using uncertainty values to refine
+Week 4: Visualize residuals, calculate confidence intervals, and compare results to NASA’s published H₀ range.
+Week 5: Write final report, generate presentation, and interpret discrepancies.
+
+## Organization
+hubble-constant-project/
+│
+├── data/           # Raw and cleaned galaxy datasets
+├── grids/            # EDA and regression
+├── results/            # Plots and summary tables
+├── scripts/          # Python scripts for data and modeling
+├── reports/          # Proposal, final report, presentation
+└── README.md           # Overview and setup instructions
+
+## Expected Outcomes
+
+- A numerical estimate of H-const with uncertainty analysis.
+- Visualizations (scatterplot with regression line, residual plots).
+- Discussion comparing the computed constant to established cosmological values and sources of error.
+- Reflection on how data-mining and regression methods apply to real scientific data.
