@@ -35,7 +35,7 @@ My self-taught component will be learning and applying linear regression to inco
 
 
 The dataset used in this project contains observational data of nearby galaxies, including their recession velocities (km/s) and 
-distances (Mpc). It is sourced from publicly available astronomical catalogs, such as the 
+distances (Mpc). It is sourced from publicly available astronomical catalogs, such as the
 NASA/IPAC Extragalactic Database (NED) or curated datasets on Kaggle (Galaxy Distance–Velocity Data).  
 
 I chose this dataset because it provides direct, measurable quantities for verifying Hubble's law, which links galaxy velocity to 
@@ -45,6 +45,10 @@ distance. It’s small enough for reproducible analysis (typically 200 galaxies)
 #| label: load-dataset
 #| message: false
 import pandas as pd
+```
+
+
+---
 
 ## Questions
 
