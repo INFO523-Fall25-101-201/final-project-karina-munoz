@@ -1,11 +1,11 @@
 ---
-title: "Project Title"
+title: "Hubble-Muñoz Estimation"
 subtitle: "INFO 523 - Final Project"
 author: 
-  - name: "Team name - Team member 1, Team member 2,..."
+  - name: "Karina Muñoz"
     affiliations:
-      - name: "College of Information Science, University of Arizona"
-description: "Project description"
+      - name: College of Information Science, University of Arizona
+description: Analyzing galaxy redshift and distance data to estimate my own value of the Hubble Constant. 
 format:
    html:
     code-tools: true
@@ -20,4 +20,9 @@ jupyter: python3
 
 ## Abstract
 
-Add project abstract here.
+This project applies data mining and regression analysis to estimate the Hubble Constant (H₀) using real galaxy velocity–distance data. 
+The dataset will be sourced from public astronomical archives such as the NASA/IPAC Extragalactic Database or Kaggle. 
+By cleaning, visualizing, and modeling the data using Python libraries like pandas, matplotlib, and scikit-learn, 
+the project aims to fit a linear relationship between galaxy recession velocity and distance, derive an estimate of H₀, and 
+compare it to published cosmological values (~70 km/s/Mpc). Weighted regression and uncertainty visualization will be used to assess data quality and model 
+confidence.
