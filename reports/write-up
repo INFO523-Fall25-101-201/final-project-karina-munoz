@@ -1,0 +1,46 @@
+
+**Modeling**
+
+The goal of the modeling section in this project was to formally test the relationship between galaxy recession velocity and luminosity distance using the cleaned supernova dataset. Hubble’s Law indicates that at low redshift, there should be a linear relationship; specifically, as the distance to a galaxy increases, its recession velocity should also increase in a predictable and proportional manner. Although the exploratory data analysis showed a strong upward trend and hinted that a straight line could be suitable, modeling offers a more precise method to quantify this trend, assess its accuracy, and determine if any deviations from linearity are significant. To achieve this, I utilized two models: a standard linear regression and a straightforward polynomial model to examine if incorporating curvature enhances the fit. Together, these two models provide a baseline estimate and allow for an evaluation of any potential complex patterns in the data.
+
+**Linear Model**
+
+According to Hubble's Law, there should be a straightforward relationship at low redshift, meaning that as a galaxy gets farther away, it moves away from us faster in a consistent way. Initial data analysis showed a strong upward trend, suggesting that a straight line might work well to describe this relationship. However, building a model allows us to look at this pattern more closely, check how accurate it is, and see if there are any significant deviations from the straight line. To do this, I used two different approaches: a regular linear regression and a simple polynomial model to see if a curve would fit the data better. Together, these methods provide a basic estimate and help us explore if the data shows any more complex behavior.
+
+The linear model I used showed a positive slope, which aligns with what I expected based on theory. This slope can be seen as an estimate of the Hubble constant for our dataset, although the main goal of this project is to evaluate how well the model performs rather than to pinpoint a specific value related to astrophysics. 
+
+The model performed quite well, with strong metrics: the Root Mean Square Error (RMSE) was about 711 km/s, indicating a low level of error. The Mean Absolute Error (MAE) was also low, suggesting that our predictions were generally accurate. Furthermore, the R² value showed that a significant amount of the variance in recession velocity can be explained by the linear trend we identified. Overall, these results confirm that our linear model effectively captures the key relationship between distance and velocity in our data.
+
+To see how well our linear model fits the data, I looked at the residuals, which are the differences between what we actually observed and what our model predicted. By plotting these residuals against distance, we can check if the model is missing any important patterns. Ideally, in a good linear model, the residuals should be randomly scattered around zero, showing no clear trends or patterns. This randomness suggests the model is accurately capturing the relationship we're studying.
+
+In this case, the scatter plot of residuals showed a mostly random spread at shorter distances but hinted at a slight downward trend at longer distances. Specifically, the model tended to underestimate recession speed at the farthest points in the dataset. This kind of pattern can suggest that the real relationship may curve in a way that a simple straight line can't fully capture. However, just looking at the residual patterns isn't enough to decide if the curvature is significant enough to warrant a more complex model, so more testing is needed.
+
+It's important to note that the patterns we observed were specific to certain local areas rather than affecting the whole situation. These patterns only showed up at the farthest distances we looked at. If there had been a real global trend, we would have seen changes across the entire range of data, not just at the extremes. This difference between local variations and the overall structure became an important focus for the rest of our analysis.
+
+**Quadratic Model**
+
+To tackle the question of whether curvature was needed in our analysis, I decided to use a basic quadratic regression model, which is essentially a polynomial equation of degree 2. This approach allows us to build on a straightforward linear model while still keeping the overall fit of the data intact. The quadratic model adds a squared term, enabling the relationship between distance and velocity to curve either upward or downward, rather than being a straight line. This flexibility can help us better understand the patterns in the data.
+]
+If the trend we observed at large distances truly indicated a curve in the data, we would expect that using a curved model (a quadratic one) would give us better results than a straight-line model (a linear one). However, that wasn't the case. The curved model resulted in a much higher error rate—around 7604 km/s—compared to the straight-line model, which performed significantly better. This large increase in error suggests that the curved model might have complicated things unnecessarily by focusing on random variations in the data instead of the real patterns. Since the performance of the curved model was so much worse, we can conclude that adding a curve did not help improve the accuracy for this dataset.
+
+The curvature test shows that while there may be some visual patterns in the data, they don’t actually lead to better predictions. In fact, the linear model performs better both in theory and in practice. This suggests that the small fluctuations we see in the residuals are just minor irregularities, not signs of a deeper, nonlinear relationship.
+
+**Interpretation**
+
+The linear regression analysis revealed a strong positive correlation between distance and the speed at which galaxies are moving away from us, aligning with Hubble's Law. This means that galaxies that are farther away are traveling faster, which is a result of the universe expanding. The model demonstrated a relatively low error rate (around 711 km/s) and a high R² value, indicating that the linear trend effectively explains most of the variations in the data.
+
+The linear model captures the overall trend well, but the residual plot reveals that it tends to slightly underestimate velocity at greater distances. This indicates that there might be some small-scale variations or measurement errors with the farthest supernovae. It's important to note that this pattern doesn't mean the overall relationship is nonlinear; rather, it shows some local differences rather than a significant shift in the general trend.
+
+I tested a quadratic model to see if adding a curve would provide a better fit to the data. However, the quadratic model actually performed worse, with an RMSE of about 7604 km/s. This suggests that the relationship between distance and velocity is best represented by a straight line in this range of redshift values. The results indicate that any differences we see in the data aren't significant enough to require a more complex, nonlinear model.
+
+The findings suggest that Hubble’s Law holds true, showing that at low redshifts, the universe expands in a nearly straight line. Although there are slight variations at greater distances, they don't change the overall pattern. This means that the simpler linear model still works well when we look at the universe's expansion.
+
+**Limitations**
+
+While the linear model gives a good fit for the data, there are a few important limits to this analysis. First, the study mainly includes supernovae that are not very far away (low redshift), where we expect the universe's expansion to behave in a straight line. Because of this, we can't apply these results to supernovae that are farther away (higher redshift), where the universe's expansion curve becomes significant. Second, measuring supernova distances and speeds comes with some inaccuracies that might add random errors to the model, especially at greater distances where the results start to show more variation. Lastly, this project only uses straightforward regression models. Using more complex cosmological models or datasets that account for factors like luminosity distance corrections and redshift uncertainties might provide a clearer understanding of how fast the universe is expanding.
+
+**Conclusion**
+
+This project focused on estimating the Hubble constant, which helps us understand how fast the universe is expanding. By examining the relationship between how quickly galaxies are moving away from us and their distances, we found that a simple straight-line model fits the data effectively. This aligns with the traditional understanding of Hubble’s Law, which shows a clear upward trend. 
+
+While there were slight irregularities in the data from distant galaxies, tests indicated that adding complexity with nonlinear models actually made the estimates less accurate. Overall, our findings suggest that the universe is expanding in a straightforward, linear manner at lower distances, and that a basic linear model is still a valid way to describe this expansion in those regions.
