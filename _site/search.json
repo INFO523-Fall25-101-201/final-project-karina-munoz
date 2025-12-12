@@ -19,5 +19,75 @@
     "title": "Estimating the Hubble Constant with Type Ia Supernovae",
     "section": "",
     "text": "#| label: load-packages #| include: false\nimport pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns\nfrom sklearn.linear_model import LinearRegression from sklearn.preprocessing import PolynomialFeatures from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score\nsns.set_theme(style=“whitegrid”) sns.set_context(“notebook”, font_scale=1.1)\nplt.rcParams[‘figure.dpi’] = 300 plt.rcParams[‘savefig.dpi’] = 300 plt.rcParams[‘figure.figsize’] = (6, 6 * 0.618)\n#| label: load-data #| include: false\ndf = pd.read_csv(“../data/processed/clean_sn_data.csv”)\nX = df[[‘d_L_Mpc’]].values y = df[‘velocity_kms’].values\n\nLinear model (global)\nlin_model = LinearRegression() lin_model.fit(X, y) y_pred = lin_model.predict(X)\nrmse_lin = np.sqrt(mean_squared_error(y, y_pred)) mae_lin = mean_absolute_error(y, y_pred) r2_lin = r2_score(y, y_pred)\n\n\nQuadratic model (curvature test)\npoly = PolynomialFeatures(degree=2, include_bias=False) X_poly = poly.fit_transform(X)\npoly_model = LinearRegression() poly_model.fit(X_poly, y) y_poly_pred = poly_model.predict(X_poly)\nrmse_poly = np.sqrt(mean_squared_error(y, y_poly_pred)) mae_poly = mean_absolute_error(y, y_poly_pred)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#goal",
+    "href": "05 reports/presentation.html#goal",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Goal",
+    "text": "Goal\n\nEstimate the Hubble constant (H₀) using Pantheon+ supernova data\nEvaluate whether a simple linear Hubble Law fits well"
+  },
+  {
+    "objectID": "05 reports/presentation.html#data",
+    "href": "05 reports/presentation.html#data",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Data",
+    "text": "Data\n\nDataset: Pantheon+ supernovae (distance vs recessional velocity / redshift-based velocity)\nKey variables used: distance and velocity (with any filtering/cleaning described in EDA)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#approach",
+    "href": "05 reports/presentation.html#approach",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Approach",
+    "text": "Approach\n\nBaseline model: linear regression (v = H₀ d)\nCheck fit: residual patterns vs distance\nCompare: linear vs quadratic (as a diagnostic, not expected physically at low z)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#key-results-fill-in",
+    "href": "05 reports/presentation.html#key-results-fill-in",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Key Results (fill in)",
+    "text": "Key Results (fill in)\n\nLinear model: R² = , RMSE =  km/s\nEstimated H₀ = ___ (units)\nMain takeaway: ___"
+  },
+  {
+    "objectID": "05 reports/presentation.html#key-results",
+    "href": "05 reports/presentation.html#key-results",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Key Results",
+    "text": "Key Results\n\nLinear model: R² = 0.983, RMSE = 711 km/s\nEstimated H₀ = 64 km/s/Mpc\nMain takeaway:"
+  },
+  {
+    "objectID": "05 reports/presentation.html#hubble-diagram",
+    "href": "05 reports/presentation.html#hubble-diagram",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Hubble Diagram",
+    "text": "Hubble Diagram\n\n\n\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-performance",
+    "href": "05 reports/presentation.html#model-performance",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Performance",
+    "text": "Model Performance\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-comparison",
+    "href": "05 reports/presentation.html#model-comparison",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Comparison",
+    "text": "Model Comparison\n\nLinear regression provides a strong baseline fit\nQuadratic model increased error (higher RMSE)\nAdded curvature does not improve predictive performance"
+  },
+  {
+    "objectID": "05 reports/presentation.html#residuals-interpretation",
+    "href": "05 reports/presentation.html#residuals-interpretation",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Residuals & Interpretation",
+    "text": "Residuals & Interpretation\n\nResiduals increase slightly with distance\nPattern suggests growing observational uncertainty at large distances\nNo strong evidence that a nonlinear model is required"
+  },
+  {
+    "objectID": "05 reports/presentation.html#main-takeaway",
+    "href": "05 reports/presentation.html#main-takeaway",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Main Takeaway",
+    "text": "Main Takeaway\n\nHubble’s Law provides an excellent first-order description of the data\nLinear regression yields a stable estimate of H₀\nMore complex models do not improve performance for this dataset"
   }
 ]

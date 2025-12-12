@@ -1,0 +1,75 @@
+---
+title: "Estimating the Hubble Constant with Pantheon+ Supernovae"
+author: "Karina Muñoz"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    incremental: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Goal
+- Estimate the Hubble constant (H₀) using Pantheon+ supernova data
+- Evaluate whether a simple linear Hubble Law fits well
+
+## Data
+- Dataset: Pantheon+ supernovae (distance vs recessional velocity / redshift-based velocity)
+- Key variables used: distance and velocity (with any filtering/cleaning described in EDA)
+
+## Approach
+- Baseline model: linear regression (v = H₀ d)
+- Check fit: residual patterns vs distance
+- Compare: linear vs quadratic (as a diagnostic, not expected physically at low z)
+
+## Key Results
+- Linear model: R² = 0.983, RMSE = 711 km/s
+- Estimated H₀ = 64 km/s/Mpc
+- Main takeaway: 
+
+## Hubble Diagram
+
+::: columns
+::: column{width="50%"}
+![](images/Linearfit1.jpg){width=65%}
+:::
+
+::: column{width="35%"}
+- Strong linear relationship between distance and velocity
+- Scatter increases at larger distances
+:::
+:::
+
+
+## Model Performance
+
+- Linear model fit:
+  - R² ≈ 0.98
+  - RMSE ≈ 711 km/s
+- Estimated Hubble constant:
+  - H₀ ≈ 65–67 km/s/Mpc
+
+
+## Model Comparison
+
+- Linear regression provides a strong baseline fit
+- Quadratic model increased error (higher RMSE)
+- Added curvature does not improve predictive performance
+
+## Residuals & Interpretation
+
+- Residuals increase slightly with distance
+- Pattern suggests growing observational uncertainty at large distances
+- No strong evidence that a nonlinear model is required
+
+## Main Takeaway
+
+- Hubble’s Law provides an excellent first-order description of the data
+- Linear regression yields a stable estimate of H₀
+- More complex models do not improve performance for this dataset
+
+
+
