@@ -6,7 +6,7 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="Karina Muñoz">
@@ -29,7 +29,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-0fde88a82f0356838740f155f1088782.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-73806f0e93c0950b605bb3afe7220856.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -122,7 +122,7 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
@@ -138,51 +138,58 @@ Karina Muñoz
 </div>
 
 </section>
-<section id="goal" class="slide level2">
-<h2>Goal</h2>
+<section id="goal-research-question" class="slide level2">
+<h2>Goal / Research Question</h2>
 <ul>
-<li class="fragment">Estimate the Hubble constant (H₀) using Pantheon+ supernova data</li>
-<li class="fragment">Evaluate whether a simple linear Hubble Law fits well</li>
+<li class="fragment"><p>What functional form best describes the relationship between distance and recession velocity?</p></li>
+<li class="fragment"><p>How does a simple linear model compare to more flexible models?</p></li>
+<li class="fragment"><p>Estimate the Hubble constant (H₀) using supernova data</p></li>
+<li class="fragment"><p>Evaluate whether a simple linear Hubble Law fits well</p></li>
 </ul>
 </section>
-<section id="data" class="slide level2">
+<section id="data" class="slide level2 smaller">
 <h2>Data</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Dataset: Pantheon+ supernovae (distance vs recessional velocity / redshift-based velocity)</li>
-<li class="fragment">Key variables used: distance and velocity (with any filtering/cleaning described in EDA)</li>
+<li class="fragment">Dataset: Pantheon+ supernovae (distance vs recessional velocity)</li>
+<li class="fragment">Pantheon+ provides high-quality Type Ia supernova distances</li>
+<li class="fragment">Focus on low-redshift regime where Hubble’s Law applies</li>
+<li class="fragment">Key variables: distance and velocity (after cleaning)</li>
 </ul>
-</section>
-<section id="approach" class="slide level2">
+</div>
+
+<img data-src="images/Redshift_vs_Velocity.jpg" style="width:100.0%" class="r-stretch"></section>
+<section id="approach" class="slide level2 smaller">
 <h2>Approach</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Baseline model: linear regression (v = H₀ d)</li>
+<li class="fragment">Baseline model: linear regression (v = H₀ d)
+<ul>
+<li class="fragment">Theory predicts proportional increase of velocity with distance</li>
+<li class="fragment">Slope provides an estimate of the Hubble constant</li>
+</ul></li>
 <li class="fragment">Check fit: residual patterns vs distance</li>
 <li class="fragment">Compare: linear vs quadratic (as a diagnostic, not expected physically at low z)</li>
 </ul>
-</section>
-<section id="key-results" class="slide level2">
-<h2>Key Results</h2>
+<section id="linear-model" class="slide level2 smaller">
+<h2>Linear Model</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Linear model: R² = 0.983, RMSE = 711 km/s</li>
-<li class="fragment">Estimated H₀ = 64 km/s/Mpc</li>
-<li class="fragment">Main takeaway:</li>
+<li class="fragment">Theory predicts proportional increase of velocity with distance</li>
+<li class="fragment">Linear regression used to quantify this relationship</li>
+<li class="fragment">Slope provides an estimate of the Hubble constant</li>
 </ul>
-</section>
-<section id="hubble-diagram" class="slide level2">
-<h2>Hubble Diagram</h2>
-<div class="columns">
-<div class="column{width=&quot;50%&quot;}">
-<p><img data-src="images/Linearfit1.jpg" style="width:65.0%"></p>
-</div><div class="column{width=&quot;35%&quot;}">
+<section id="linear-model-performance" class="slide level2 smaller">
+<h2>Linear Model Performance</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Strong linear relationship between distance and velocity</li>
-<li class="fragment">Scatter increases at larger distances</li>
+<li class="fragment">RMSE ≈ 711 km/s</li>
+<li class="fragment">MAE low, indicating generally accurate predictions</li>
+<li class="fragment">High R² shows linear trend explains most variance</li>
 </ul>
-</div>
-</div>
-</section>
-<section id="model-performance" class="slide level2">
+<section id="model-performance" class="slide level2 smaller">
 <h2>Model Performance</h2>
+<div class="smaller">
 <ul>
 <li class="fragment">Linear model fit:
 <ul>
@@ -193,33 +200,102 @@ Karina Muñoz
 <ul>
 <li class="fragment">H₀ ≈ 65–67 km/s/Mpc</li>
 </ul></li>
+<li class="fragment">MAE low, indicating generally accurate predictions</li>
+<li class="fragment">High R² shows linear trend explains most variance</li>
 </ul>
-</section>
-<section id="model-comparison" class="slide level2">
+<section id="hubble-diagram" class="slide level2 smaller">
+<h2>Hubble Diagram</h2>
+<div class="smaller">
+<ul>
+<li class="fragment">Strong linear relationship between distance and velocity</li>
+<li class="fragment">Scatter increases at larger distances</li>
+</ul>
+</div>
+
+<img data-src="images/Linearfit1.jpg" style="width:100.0%" class="r-stretch"></section>
+<section id="residual-analysis" class="slide level2 smaller">
+<h2>Residual Analysis</h2>
+<div class="smaller">
+<ul>
+<li class="fragment">Residuals mostly random at shorter distances</li>
+<li class="fragment">Slight trend appears only at largest distances</li>
+<li class="fragment">Suggests local deviations rather than global nonlinearity</li>
+</ul>
+</div>
+
+<img data-src="images/Residualfit1.jpg" style="width:100.0%" class="r-stretch"></section>
+<section id="quadratic-model-test" class="slide level2 smaller">
+<h2>Quadratic Model Test</h2>
+<div class="smaller">
+<ul>
+<li class="fragment">Quadratic regression used to test for curvature</li>
+<li class="fragment">Expected improvement if curvature were meaningful</li>
+<li class="fragment">Model performed significantly worse</li>
+</ul>
+<section id="model-comparison" class="slide level2 smaller">
 <h2>Model Comparison</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Linear regression provides a strong baseline fit</li>
-<li class="fragment">Quadratic model increased error (higher RMSE)</li>
-<li class="fragment">Added curvature does not improve predictive performance</li>
+<li class="fragment">Linear model RMSE ≈ 711 km/s</li>
+<li class="fragment">Quadratic model RMSE ≈ 7604 km/s</li>
+<li class="fragment">Added complexity increases error rather than improving fit</li>
 </ul>
-</section>
-<section id="residuals-interpretation" class="slide level2">
-<h2>Residuals &amp; Interpretation</h2>
+<section id="residuals-redshift-test" class="slide level2 smaller">
+<h2>Residuals &amp; Redshift Test</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Residuals increase slightly with distance</li>
-<li class="fragment">Pattern suggests growing observational uncertainty at large distances</li>
-<li class="fragment">No strong evidence that a nonlinear model is required</li>
+<li class="fragment">Residual scatter increases primarily at highest redshift</li>
+<li class="fragment">Data split into low-z and high-z subsets</li>
+<li class="fragment">Low-z: stable slope, low error</li>
+<li class="fragment">High-z: unstable, noise-dominated</li>
 </ul>
-</section>
-<section id="main-takeaway" class="slide level2">
-<h2>Main Takeaway</h2>
+</div>
+
+<img data-src="images/residuals_by_redshift.jpg" style="width:100.0%" class="r-stretch"></section>
+<section id="interpretation" class="slide level2 smaller">
+<h2>Interpretation</h2>
+<div class="smaller">
 <ul>
-<li class="fragment">Hubble’s Law provides an excellent first-order description of the data</li>
-<li class="fragment">Linear regression yields a stable estimate of H₀</li>
-<li class="fragment">More complex models do not improve performance for this dataset</li>
+<li class="fragment">Strong positive distance–velocity relationship observed</li>
+<li class="fragment">Linear model captures dominant physical trend</li>
+<li class="fragment">Deviations at large distances likely due to observational uncertainty</li>
+</ul>
+</div>
+
+<img data-src="images/Smoothing_trend.jpg" style="width:100.0%" class="r-stretch"></section>
+<section id="limitations" class="slide level2 smaller">
+<h2>Limitations</h2>
+<div class="smaller">
+<ul>
+<li class="fragment">Analysis focused on low-redshift supernovae</li>
+<li class="fragment">Measurement uncertainty increases at large distances</li>
+<li class="fragment">More complex cosmological models not explored</li>
+</ul>
+<section id="conclusion" class="slide level2 smaller">
+<h2>Conclusion</h2>
+<div class="smaller">
+<ul>
+<li class="fragment">Linear model provides an effective description of expansion at low redshift</li>
+<li class="fragment">Nonlinear models do not improve predictive performance</li>
+<li class="fragment">Hubble’s Law remains valid for this dataset</li>
 </ul>
 
 
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
+</section>
+</div>
 </section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
