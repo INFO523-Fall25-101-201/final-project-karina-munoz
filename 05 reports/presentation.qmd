@@ -1,0 +1,148 @@
+---
+title: "Estimating the Hubble Constant with Pantheon+ Supernovae"
+author: "Karina Muñoz"
+format:
+  revealjs:
+    theme: night
+    slide-number: true
+    incremental: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+## Goal / Research Question
+
+- What functional form best describes the relationship between distance and recession velocity?
+- How does a simple linear model compare to more flexible models?
+
+- Estimate the Hubble constant (H₀) using supernova data
+- Evaluate whether a simple linear Hubble Law fits well
+
+## Data {.smaller}
+
+::: {.smaller}
+- Dataset: Pantheon+ supernovae (distance vs recessional velocity)
+- Pantheon+ provides high-quality Type Ia supernova distances
+- Focus on low-redshift regime where Hubble’s Law applies
+- Key variables: distance and velocity (after cleaning)
+:::
+
+![](images/Redshift_vs_Velocity.jpg){width=100%}
+
+
+## Approach {.smaller}
+
+::: {.smaller}
+- Baseline model: linear regression (v = H₀ d)
+  * Theory predicts proportional increase of velocity with distance
+  * Slope provides an estimate of the Hubble constant
+- Check fit: residual patterns vs distance
+- Compare: linear vs quadratic (as a diagnostic, not expected physically at low z)
+:::
+
+## Linear Model {.smaller}
+
+::: {.smaller}
+- Theory predicts proportional increase of velocity with distance
+- Linear regression used to quantify this relationship
+- Slope provides an estimate of the Hubble constant
+:::
+
+## Linear Model Performance {.smaller}
+
+::: {.smaller}
+- RMSE ≈ 711 km/s
+- MAE low, indicating generally accurate predictions
+- High R² shows linear trend explains most variance
+:::
+
+## Model Performance {.smaller}
+
+::: {.smaller}
+- Linear model fit:
+  - R² ≈ 0.98
+  - RMSE ≈ 711 km/s
+- Estimated Hubble constant:
+  - H₀ ≈ 65–67 km/s/Mpc
+- MAE low, indicating generally accurate predictions
+- High R² shows linear trend explains most variance
+:::
+
+## Hubble Diagram {.smaller}
+
+::: {.smaller}
+- Strong linear relationship between distance and velocity
+- Scatter increases at larger distances
+:::
+
+![](images/Linearfit1.jpg){width=100%}
+
+
+## Residual Analysis {.smaller}
+
+::: {.smaller}
+- Residuals mostly random at shorter distances
+- Slight trend appears only at largest distances
+- Suggests local deviations rather than global nonlinearity
+:::
+
+![](images/Residualfit1.jpg){width=100%}
+
+
+## Quadratic Model Test {.smaller}
+
+::: {.smaller}
+- Quadratic regression used to test for curvature
+- Expected improvement if curvature were meaningful
+- Model performed significantly worse
+:::
+
+## Model Comparison {.smaller}
+
+::: {.smaller}
+- Linear model RMSE ≈ 711 km/s
+- Quadratic model RMSE ≈ 7604 km/s
+- Added complexity increases error rather than improving fit
+:::
+
+## Residuals & Redshift Test {.smaller}
+
+::: {.smaller}
+- Residual scatter increases primarily at highest redshift
+- Data split into low-z and high-z subsets
+- Low-z: stable slope, low error
+- High-z: unstable, noise-dominated
+:::
+
+![](images/residuals_by_redshift.jpg){width=100%}
+
+
+## Interpretation {.smaller}
+
+::: {.smaller}
+- Strong positive distance–velocity relationship observed
+- Linear model captures dominant physical trend
+- Deviations at large distances likely due to observational uncertainty
+:::
+
+![](images/Smoothing_trend.jpg){width=100%}
+
+
+## Limitations {.smaller}
+
+::: {.smaller}
+- Analysis focused on low-redshift supernovae
+- Measurement uncertainty increases at large distances
+- More complex cosmological models not explored
+:::
+
+## Conclusion {.smaller}
+
+::: {.smaller}
+
+- Linear model provides an effective description of expansion at low redshift
+- Nonlinear models do not improve predictive performance
+- Hubble’s Law remains valid for this dataset
+:::

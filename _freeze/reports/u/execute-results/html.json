@@ -1,0 +1,12 @@
+{
+  "hash": "c55ae7f4b427d3101e7de116e665e0d0",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Estimating the Hubble Constant with Type Ia Supernovae\"\nsubtitle: \"INFO 523 – Summer 2025 – Final Project\"\nauthor: \"Karina Muñoz\"\n\ntitle-slide-attributes:\n  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg\n  data-background-size: stretch\n  data-background-opacity: \"0.7\"\n  data-slide-number: none\nformat: \n  revealjs:\n    theme: default\n  \neditor: visual\njupyter: python3\nexecute:\n  echo: false\n---\n\n#| label: load-packages\n#| include: false\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\n\nfrom sklearn.linear_model import LinearRegression\nfrom sklearn.preprocessing import PolynomialFeatures\nfrom sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score\n\nsns.set_theme(style=\"whitegrid\")\nsns.set_context(\"notebook\", font_scale=1.1)\n\nplt.rcParams['figure.dpi'] = 300\nplt.rcParams['savefig.dpi'] = 300\nplt.rcParams['figure.figsize'] = (6, 6 * 0.618)\n\n#| label: load-data\n#| include: false\n\ndf = pd.read_csv(\"../data/processed/clean_sn_data.csv\")\n\nX = df[['d_L_Mpc']].values\ny = df['velocity_kms'].values\n\n# Linear model (global)\n\nlin_model = LinearRegression()\nlin_model.fit(X, y)\ny_pred = lin_model.predict(X)\n\nrmse_lin = np.sqrt(mean_squared_error(y, y_pred))\nmae_lin = mean_absolute_error(y, y_pred)\nr2_lin = r2_score(y, y_pred)\n\n# Quadratic model (curvature test)\n\npoly = PolynomialFeatures(degree=2, include_bias=False)\nX_poly = poly.fit_transform(X)\n\npoly_model = LinearRegression()\npoly_model.fit(X_poly, y)\ny_poly_pred = poly_model.predict(X_poly)\n\nrmse_poly = np.sqrt(mean_squared_error(y, y_poly_pred))\nmae_poly = mean_absolute_error(y, y_poly_pred)\n\n",
+    "supporting": [
+      "u_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}
