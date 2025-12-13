@@ -32,14 +32,14 @@
     "href": "05 reports/presentation.html#data",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Data",
-    "text": "Data\n\n\nDataset: Pantheon+ supernovae (distance vs recessional velocity)\nPantheon+ provides high-quality Type Ia supernova distances\nFocus on low-redshift regime where Hubble’s Law applies\nKey variables: distance and velocity (after cleaning)"
+    "text": "Data\n\n\n\n\nDataset: Pantheon+ supernovae (distance vs recessional velocity)\nPantheon+ provides high-quality Type Ia supernova distances\nFocus on low-redshift regime where Hubble’s Law applies\n\n\n\n\n\n\nQuantity\nValue\n\n\n\n\nTotal supernovae (n)\n~1700\n\n\nLow-z subset (zHD &lt; 0.1)\n645\n\n\nVelocity range (km/s)\n~300 – 40,000\n\n\nLuminosity distance range (Mpc)\n~1 – 1,600\n\n\nRedshift zHD range\n~0.001 – 0.23"
   },
   {
     "objectID": "05 reports/presentation.html#approach",
     "href": "05 reports/presentation.html#approach",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Approach",
-    "text": "Approach\n\n\nBaseline model: linear regression (v = H₀ d)\n\nTheory predicts proportional increase of velocity with distance\nSlope provides an estimate of the Hubble constant\n\nCheck fit: residual patterns vs distance\nCompare: linear vs quadratic (as a diagnostic, not expected physically at low z)\n\n\nLinear Model\n\n\nTheory predicts proportional increase of velocity with distance\nLinear regression used to quantify this relationship\nSlope provides an estimate of the Hubble constant\n\n\nLinear Model Performance\n\n\nRMSE ≈ 711 km/s\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nModel Performance\n\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc\n\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nHubble Diagram\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances\n\n\n\n\n\nResidual Analysis\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity\n\n\n\n\n\nQuadratic Model Test\n\n\nQuadratic regression used to test for curvature\nExpected improvement if curvature were meaningful\nModel performed significantly worse\n\n\nModel Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Approach\n\n\nBaseline model: linear regression (v = H₀ d)\n\nTheory predicts proportional increase of velocity with distance\nSlope provides an estimate of the Hubble constant\n\nCheck fit: residual patterns vs distance\nCompare: linear vs quadratic (diagnostic; not expected physically at low z)"
   },
   {
     "objectID": "05 reports/presentation.html#key-results-fill-in",
@@ -67,14 +67,14 @@
     "href": "05 reports/presentation.html#model-performance",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Model Performance",
-    "text": "Model Performance\n\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc\n\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nHubble Diagram\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances\n\n\n\n\n\nResidual Analysis\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity\n\n\n\n\n\nQuadratic Model Test\n\n\nQuadratic regression used to test for curvature\nExpected improvement if curvature were meaningful\nModel performed significantly worse\n\n\nModel Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Model Performance\n\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc\n\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances"
   },
   {
     "objectID": "05 reports/presentation.html#model-comparison",
     "href": "05 reports/presentation.html#model-comparison",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Model Comparison",
-    "text": "Model Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Model Comparison\n\n\n\n\n\n\nModel\nR²\nRMSE (km/s)\nMAE (km/s)\n\n\n\n\nLinear\n0.983\n711\n492\n\n\nQuadratic\n0.986\n7604\n448\n\n\n\n\nRMSE strongly favors the linear model\nQuadratic increases error (overfitting noise)"
   },
   {
     "objectID": "05 reports/presentation.html#residuals-interpretation",
@@ -95,35 +95,35 @@
     "href": "05 reports/presentation.html#goal-research-question",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Goal / Research Question",
-    "text": "Goal / Research Question\n\nWhat functional form best describes the relationship between distance and recession velocity?\nHow does a simple linear model compare to more flexible models?\nEstimate the Hubble constant (H₀) using supernova data\nEvaluate whether a simple linear Hubble Law fits well"
+    "text": "Goal / Research Question\n\nWhat functional form best describes the relationship between distance and recession velocity?\nHow does a simple linear model compare to more flexible models?\nEstimate the Hubble constant (H0) using supernova data\nEvaluate whether a linear Hubble Law fits the data well"
   },
   {
     "objectID": "05 reports/presentation.html#linear-model",
     "href": "05 reports/presentation.html#linear-model",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Linear Model",
-    "text": "Linear Model\n\n\nTheory predicts proportional increase of velocity with distance\nLinear regression used to quantify this relationship\nSlope provides an estimate of the Hubble constant\n\n\nLinear Model Performance\n\n\nRMSE ≈ 711 km/s\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nModel Performance\n\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc\n\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nHubble Diagram\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances\n\n\n\n\n\nResidual Analysis\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity\n\n\n\n\n\nQuadratic Model Test\n\n\nQuadratic regression used to test for curvature\nExpected improvement if curvature were meaningful\nModel performed significantly worse\n\n\nModel Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Linear Model\n\n\nTheory predicts proportional increase of velocity with distance\nLinear regression used to quantify this relationship\nSlope provides an estimate of H₀"
   },
   {
     "objectID": "05 reports/presentation.html#linear-model-performance",
     "href": "05 reports/presentation.html#linear-model-performance",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Linear Model Performance",
-    "text": "Linear Model Performance\n\n\nRMSE ≈ 711 km/s\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nModel Performance\n\n\nLinear model fit:\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\n\nEstimated Hubble constant:\n\nH₀ ≈ 65–67 km/s/Mpc\n\nMAE low, indicating generally accurate predictions\nHigh R² shows linear trend explains most variance\n\n\nHubble Diagram\n\n\nStrong linear relationship between distance and velocity\nScatter increases at larger distances\n\n\n\n\n\nResidual Analysis\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity\n\n\n\n\n\nQuadratic Model Test\n\n\nQuadratic regression used to test for curvature\nExpected improvement if curvature were meaningful\nModel performed significantly worse\n\n\nModel Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Linear Model Performance\n\n\n\n\nR² ≈ 0.98\nRMSE ≈ 711 km/s\nMAE ≈ 492 km/s\nSlope provides an estimate of H₀"
   },
   {
     "objectID": "05 reports/presentation.html#residual-analysis",
     "href": "05 reports/presentation.html#residual-analysis",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Residual Analysis",
-    "text": "Residual Analysis\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity"
+    "text": "Residual Analysis\n\n\n\n\nResiduals mostly random at shorter distances\nSlight trend appears only at largest distances\nSuggests local deviations rather than global nonlinearity"
   },
   {
     "objectID": "05 reports/presentation.html#quadratic-model-test",
     "href": "05 reports/presentation.html#quadratic-model-test",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Quadratic Model Test",
-    "text": "Quadratic Model Test\n\n\nQuadratic regression used to test for curvature\nExpected improvement if curvature were meaningful\nModel performed significantly worse\n\n\nModel Comparison\n\n\nLinear model RMSE ≈ 711 km/s\nQuadratic model RMSE ≈ 7604 km/s\nAdded complexity increases error rather than improving fit\n\n\nResiduals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated\n\n\n\n\n\nInterpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty\n\n\n\n\n\nLimitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Quadratic Model Test\n\n\nQuadratic regression used to test for curvature\nIf curvature were meaningful, performance should improve\nModel performed significantly worse (higher RMSE)"
   },
   {
     "objectID": "05 reports/presentation.html#model-comparison-1",
@@ -137,21 +137,21 @@
     "href": "05 reports/presentation.html#interpretation",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Interpretation",
-    "text": "Interpretation\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty"
+    "text": "Interpretation\n\n\n\n\nStrong positive distance–velocity relationship observed\nLinear model captures dominant physical trend\nDeviations at large distances likely due to observational uncertainty"
   },
   {
     "objectID": "05 reports/presentation.html#limitations",
     "href": "05 reports/presentation.html#limitations",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Limitations",
-    "text": "Limitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored\n\n\nConclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Limitations\n\n\nAnalysis focused on low-redshift supernovae\nMeasurement uncertainty increases at large distances\nMore complex cosmological models not explored"
   },
   {
     "objectID": "05 reports/presentation.html#conclusion",
     "href": "05 reports/presentation.html#conclusion",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Conclusion",
-    "text": "Conclusion\n\n\nLinear model provides an effective description of expansion at low redshift\nNonlinear models do not improve predictive performance\nHubble’s Law remains valid for this dataset"
+    "text": "Conclusion\n\nLinear regression provides a strong fit to low-redshift Pantheon+ supernova data\n\nEstimated Hubble constant:\n(H_0  )\n\nResiduals show increasing uncertainty at larger redshifts, but no evidence that added complexity improves the model\n\nFor the local universe, a linear Hubble Law remains an effective and interpretable model"
   },
   {
     "objectID": "05 reports/presentation.html#redshift-split-results",
@@ -172,7 +172,7 @@
     "href": "05 reports/presentation.html#residuals-by-redshift",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Residuals by Redshift",
-    "text": "Residuals by Redshift\n\nLow-redshift residuals remain tightly clustered\nHigh-redshift residuals show much larger scatter"
+    "text": "Residuals by Redshift\n\n\n\nResidual variance increases with redshift\n\nIndicates non-constant error (heteroskedasticity)\n\nExpected due to growing distance uncertainty and reduced dominance of peculiar velocities\n\nImplication:\nLinear trend remains valid, but error structure suggests weighted modeling for future work."
   },
   {
     "objectID": "05 reports/presentation.html#trend-smoothing-check",
@@ -200,7 +200,7 @@
     "href": "05 reports/presentation.html#residuals-redshift-test",
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Residuals & Redshift Test",
-    "text": "Residuals & Redshift Test\n\n\nResidual scatter increases primarily at highest redshift\nData split into low-z and high-z subsets\nLow-z: stable slope, low error\nHigh-z: unstable, noise-dominated"
+    "text": "Residuals & Redshift Test\n\n\n\n\nResiduals are mostly random at low distance / low redshift\nScatter increases primarily at highest redshift\nData split into two regimes:\n\nLow-z: stable slope, low RMSE\nHigh-z: unstable fit, noise-dominated\n\nIndicates measurement uncertainty, not nonlinear expansion"
   },
   {
     "objectID": "05 reports/presentation.html#motivation-research-question-.",
@@ -236,5 +236,173 @@
     "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
     "section": "Data . {smaller}",
     "text": "Data . {smaller}\n\nDataset: Pantheon+ supernovae (distance vs recessional velocity)\nPantheon+ provides high-quality Type Ia supernova distances\nFocus on low-redshift regime where Hubble’s Law applies\nKey variables: distance and velocity (after cleaning)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#exploratory-data-analysis-distance-vs-velocity",
+    "href": "05 reports/presentation.html#exploratory-data-analysis-distance-vs-velocity",
+    "title": "Project Title",
+    "section": "Exploratory Data Analysis: Distance vs Velocity",
+    "text": "Exploratory Data Analysis: Distance vs Velocity\n\n\n\nStrong positive relationship: velocity increases with distance\nOverall trend appears approximately linear\nScatter increases at larger distances (possible heteroskedasticity)\n:::\n\n\nInterpretation\n\nSupports the expected Hubble Law pattern\nMotivates checking residuals for systematic structure\n:::\n\n\nResidual Check (EDA)\n\nResiduals are mostly centered near 0\nSlight pattern at larger distances (mild curvature in smoothed trend)\nCould reflect:\n\nmeasurement noise growing with distance\nphysical departures from strict linearity (even at low z)\n\n\n\n\nBaseline Model: Linear Regression\nModel\n[ v = H_0 d + b]\n\nEstimated (H_0 ) km/s/Mpc\nIntercept (b ) km/s (consistent with local/peculiar motions)\nStrong fit:\n\n(R^2 )\nRMSE () km/s\n\n\n\n\nModel Comparison: Quadratic Regression\nModel\n[ v = ad^2 + bd + c]\n\nPerformed much worse than linear:\n\nRMSE increased to ~7600 km/s\n\nIndicates overfitting / unnecessary flexibility\nConclusion: curvature term hurts prediction rather than improving it\n\n\n\nWhy Might Small Curvature Appear?\n\nDistance in cosmology is not perfectly linear with redshift: [ d_L = (1 + z) r(z)]\nEven at low redshift, small departures can appear in residuals\nData science takeaway:\n\nResidual patterns can reflect real structure\nBut added complexity must be justified by metrics + theory\n\n\n\n\nModel Justification (Data Science Framing)\nWhy linear is the best choice here\n\nBest predictive performance (lower RMSE)\nHigh interpretability: slope directly estimates (H_0)\nAligns with theory in low-z regime\n\nWhy quadratic is not supported\n\nWorse out-of-sample behavior (overfit signal/noise)\nNo strong physical justification at z &lt; 0.1\n\n\n\nLimitations & Future Work\nLimitations\n\nLow-redshift only (local universe)\nNo full uncertainty propagation / weighting\nAssumes independent errors\n\nFuture extensions\n\nWeighted regression (uncertainty-aware)\nSplit by redshift threshold and compare slopes\nBayesian regression for posterior on (H_0)\nExtend to higher redshift with cosmology-aware models\n\n\n\nKey Takeaways\n\nA simple linear model can be both accurate and interpretable\nEDA + residuals guide whether complexity is warranted\nQuadratic model increased error → clear overfitting signal\nFinal estimate (low-z): (H_0 ) km/s/Mpc"
+  },
+  {
+    "objectID": "05 reports/presentation.html#residual-check-eda",
+    "href": "05 reports/presentation.html#residual-check-eda",
+    "title": "Project Title",
+    "section": "Residual Check (EDA)",
+    "text": "Residual Check (EDA)\n\nResiduals are mostly centered near 0\nSlight pattern at larger distances (mild curvature in smoothed trend)\nCould reflect:\n\nmeasurement noise growing with distance\nphysical departures from strict linearity (even at low z)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#baseline-model-linear-regression",
+    "href": "05 reports/presentation.html#baseline-model-linear-regression",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Baseline Model: Linear Regression",
+    "text": "Baseline Model: Linear Regression\n\n\nModel\n[ v = H_0 d + b ]\n\nEstimated parameters (low-z)\n- Slope (H_0 ) km/s/Mpc\n- Intercept (b ) km/s\nFit metrics\n- (R^2 )\n- RMSE () km/s"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-comparison-quadratic-regression",
+    "href": "05 reports/presentation.html#model-comparison-quadratic-regression",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Comparison: Quadratic Regression",
+    "text": "Model Comparison: Quadratic Regression\nModel\n[ v = ad^2 + bd + c ]\n\n\n\nRMSE increased to ~7600 km/s\n\nClear overfitting\n\nWorse predictive performance"
+  },
+  {
+    "objectID": "05 reports/presentation.html#why-might-small-curvature-appear",
+    "href": "05 reports/presentation.html#why-might-small-curvature-appear",
+    "title": "Project Title",
+    "section": "Why Might Small Curvature Appear?",
+    "text": "Why Might Small Curvature Appear?\n\nDistance in cosmology is not perfectly linear with redshift: [ d_L = (1 + z) r(z)]\nEven at low redshift, small departures can appear in residuals\nData science takeaway:\n\nResidual patterns can reflect real structure\nBut added complexity must be justified by metrics + theory"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-justification-data-science-framing",
+    "href": "05 reports/presentation.html#model-justification-data-science-framing",
+    "title": "Project Title",
+    "section": "Model Justification (Data Science Framing)",
+    "text": "Model Justification (Data Science Framing)\nWhy linear is the best choice here\n\nBest predictive performance (lower RMSE)\nHigh interpretability: slope directly estimates (H_0)\nAligns with theory in low-z regime\n\nWhy quadratic is not supported\n\nWorse out-of-sample behavior (overfit signal/noise)\nNo strong physical justification at z &lt; 0.1"
+  },
+  {
+    "objectID": "05 reports/presentation.html#limitations-future-work",
+    "href": "05 reports/presentation.html#limitations-future-work",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Limitations & Future Work",
+    "text": "Limitations & Future Work\nLimitations - Low-redshift only\n- No uncertainty weighting\n- Independent error assumption\nFuture work - Weighted / Bayesian regression\n- Redshift threshold analysis\n- Extend to higher-z cosmology"
+  },
+  {
+    "objectID": "05 reports/presentation.html#key-takeaways",
+    "href": "05 reports/presentation.html#key-takeaways",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\n\nSimple models can be powerful\n\nResiduals guide modeling decisions\n\nComplexity must be justified\n\nFinal estimate: (H_0 ) km/s/Mpc"
+  },
+  {
+    "objectID": "05 reports/presentation.html#data-overview",
+    "href": "05 reports/presentation.html#data-overview",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Data Overview",
+    "text": "Data Overview\n\n\n\n\n\n\nQuantity\nValue\n\n\n\n\nTotal supernovae (n)\n~1700\n\n\nLow-z subset (zHD &lt; 0.1)\n645\n\n\nVelocity range (km/s)\n~300 – 40,000\n\n\nLuminosity distance (Mpc)\n~1 – 1,600\n\n\nRedshift zHD range\n~0.001 – 0.23\n\n\n\n\n\n\n\nDataset: Pantheon+ Type Ia supernovae\n\nFocus on low-redshift regime\n\nType Ia supernovae are standardizable candles"
+  },
+  {
+    "objectID": "05 reports/presentation.html#exploratory-data-analysis",
+    "href": "05 reports/presentation.html#exploratory-data-analysis",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\n\n\nStrong positive relationship between distance and velocity\n\nTrend is approximately linear\n\nScatter increases at larger distances"
+  },
+  {
+    "objectID": "05 reports/presentation.html#residual-patterns-from-eda",
+    "href": "05 reports/presentation.html#residual-patterns-from-eda",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Residual Patterns from EDA",
+    "text": "Residual Patterns from EDA\n\n\n\nResiduals centered near zero\n\nMild systematic trend at larger distances\n\nLOWESS smoothing highlights slight curvature"
+  },
+  {
+    "objectID": "05 reports/presentation.html#why-does-curvature-appear",
+    "href": "05 reports/presentation.html#why-does-curvature-appear",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Why Does Curvature Appear?",
+    "text": "Why Does Curvature Appear?\n\nCosmological distance is not strictly linear: [ d_L = (1 + z) r(z) ]\nSmall departures are expected even at low redshift\n\nResidual structure reflects physical and observational effects"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-justification",
+    "href": "05 reports/presentation.html#model-justification",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Justification",
+    "text": "Model Justification\nWhy linear works - Lowest error\n- Interpretable slope → (H_0)\n- Matches theory in low-redshift regime\nWhy quadratic fails - Overfits noise\n- No physical motivation"
+  },
+  {
+    "objectID": "05 reports/presentation.html#residual-patterns",
+    "href": "05 reports/presentation.html#residual-patterns",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Residual Patterns",
+    "text": "Residual Patterns\n\n\n\nResiduals mostly centered near zero\n\nSlight systematic trend at larger distances\n\nLOWESS smoothing highlights mild curvature"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-comparison-quadratic",
+    "href": "05 reports/presentation.html#model-comparison-quadratic",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Comparison: Quadratic",
+    "text": "Model Comparison: Quadratic\n\n\n\nQuadratic model increases RMSE to ~7600 km/s\n\nClear overfitting\n\nWorse predictive performance"
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-performance-comparison",
+    "href": "05 reports/presentation.html#model-performance-comparison",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Performance Comparison",
+    "text": "Model Performance Comparison\n\n\n\n\nModel\n(R^2)\nRMSE (km/s)\nMAE (km/s)\n\n\n\n\nLinear\n0.983\n711\n492\n\n\nQuadratic\n0.986\n7604\n448\n\n\n\n\n\nQuadratic regression shows marginal metric improvements but introduces additional complexity."
+  },
+  {
+    "objectID": "05 reports/presentation.html#dataset-summary",
+    "href": "05 reports/presentation.html#dataset-summary",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Dataset Summary",
+    "text": "Dataset Summary\n\n\n\n\nQuantity\nValue\n\n\n\n\nTotal supernovae\n~1700\n\n\nLow-redshift subset (zHD &lt; 0.1)\n645\n\n\nVelocity range (km/s)\n~300 – 40,000\n\n\nLuminosity distance range (Mpc)\n~1 – 1,600\n\n\nRedshift (zHD) range\n~0.001 – 0.23\n\n\n\n\n\nAnalysis focuses on the low-redshift subset where Hubble’s Law is expected to be approximately linear."
+  },
+  {
+    "objectID": "05 reports/presentation.html#model-interpretation-justification",
+    "href": "05 reports/presentation.html#model-interpretation-justification",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Model Interpretation & Justification",
+    "text": "Model Interpretation & Justification\n\nInterpretation - Linear slope directly estimates the Hubble constant:\n(H_0  ) - Intercept reflects local velocity effects and calibration offsets\nJustification - Linear model captures the dominant trend with minimal complexity - Quadratic model offers only marginal metric gains - Added flexibility reduces interpretability and lacks physical motivation at low redshift\nFinal choice - Linear regression provides the best balance of performance, interpretability, and theory"
+  },
+  {
+    "objectID": "05 reports/presentation.html#low-redshift-focus-zhd-0.1",
+    "href": "05 reports/presentation.html#low-redshift-focus-zhd-0.1",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Low-Redshift Focus (zHD < 0.1)",
+    "text": "Low-Redshift Focus (zHD &lt; 0.1)\n\n\n\nThis subset is where Hubble’s Law is expected to be closest to linear\n\nReduced cosmological curvature effects compared to higher redshift\n\nUsed to estimate (H_0) with better interpretability\n\n\n(If you computed a low-z slope separately, add it here:)\n- (H_0) (low-z): [insert your value] km/s/Mpc"
+  },
+  {
+    "objectID": "05 reports/presentation.html#higher-redshift-behavior-context",
+    "href": "05 reports/presentation.html#higher-redshift-behavior-context",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Higher-Redshift Behavior (Context)",
+    "text": "Higher-Redshift Behavior (Context)\n\n\nAt higher redshift, residual variance increases noticeably\n\nLinear trend remains present, but uncertainty grows\n\nSlope estimates become less stable due to:\n\nincreasing distance uncertainty\n\ncosmological effects beyond linear expansion\n\n\nImplication - Higher-redshift data motivate cosmology-aware models\n- Do not justify adding polynomial terms to the low-z model"
+  },
+  {
+    "objectID": "05 reports/presentation.html#low-redshift-model-zhd-0.1",
+    "href": "05 reports/presentation.html#low-redshift-model-zhd-0.1",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Low-Redshift Model (zHD < 0.1)",
+    "text": "Low-Redshift Model (zHD &lt; 0.1)\n\n\nAnalysis restricted to the low-redshift regime where Hubble’s Law is expected to be linear\n\nLinear regression fit is tighter than for the full dataset\n\nEstimated slope (Hubble constant):\n(H_0  )\n\nInterpretation - Reduced scatter confirms linear behavior in the local universe\n- Supports using a simple linear model to estimate (H_0)"
+  },
+  {
+    "objectID": "05 reports/presentation.html#higher-redshift-behavior-context-1",
+    "href": "05 reports/presentation.html#higher-redshift-behavior-context-1",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Higher-Redshift Behavior (Context)",
+    "text": "Higher-Redshift Behavior (Context)\n\n\nAt higher redshift, residual variance increases substantially\n\nLinear trend is still present, but uncertainty grows\n\nSlope estimates become less stable due to:\n\nincreasing distance uncertainty\n\ncosmological effects beyond simple linear expansion\n\n\nImplication - Higher redshift data are better suited for cosmology-aware models\n- Do not justify adding polynomial terms in the low-z regime"
+  },
+  {
+    "objectID": "05 reports/presentation.html#higher-redshift-behavior-ext",
+    "href": "05 reports/presentation.html#higher-redshift-behavior-ext",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Higher-Redshift Behavior (ext)",
+    "text": "Higher-Redshift Behavior (ext)\n\n\nAt higher redshift, residual variance increases noticeably\n\nLinear trend remains present, but uncertainty grows\n\nSlope estimates become less stable due to:\n\nincreasing distance uncertainty\n\ncosmological effects beyond linear expansion\n\n\nImplication - Higher-redshift data motivate cosmology-aware models\n- Do not justify adding polynomial terms to the low-z model"
+  },
+  {
+    "objectID": "05 reports/presentation.html#higher-redshift-behavior",
+    "href": "05 reports/presentation.html#higher-redshift-behavior",
+    "title": "Estimating the Hubble Constant with Pantheon+ Supernovae",
+    "section": "Higher-Redshift Behavior",
+    "text": "Higher-Redshift Behavior\n\n\nAt higher redshift, residual variance increases noticeably\n\nLinear trend remains present, but uncertainty grows\n\nSlope estimates become less stable due to:\n\nincreasing distance uncertainty\n\ncosmological effects beyond linear expansion\n\n\nImplication - Higher-redshift data motivate cosmology-aware models\n- Do not justify adding polynomial terms to the low-z model"
   }
 ]
