@@ -1,5 +1,5 @@
 ---
-title: "Hubble-Muñoz Estimation"
+title: "Estimation of Hubble Constant"
 subtitle: "INFO 523 - Final Project"
 author: 
   - name: "Karina Muñoz"
