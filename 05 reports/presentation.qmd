@@ -186,3 +186,9 @@ d_L = (1 + z) r(z)
   **\(H_0 \approx 64.6\ \text{km/s/Mpc}\)**  
 - Residuals show increasing uncertainty at larger redshifts, but no evidence that added complexity improves the model  
 - For the local universe, a linear Hubble Law remains an effective and interpretable model
+
+
+
+
+
+ <small>AI was used for formatting, proofreading, and rephrasing for better fluidity, readability, and comprehension </small>
