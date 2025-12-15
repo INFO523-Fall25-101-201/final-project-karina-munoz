@@ -1,5 +1,5 @@
 ---
-title: "Hubble-Muñoz Estimation"
+title: "Hubble Estimation"
 subtitle: "Project Proposal"
 author:
   - name: "Karina Muñoz"
@@ -22,30 +22,22 @@ jupyter: python3
 
 ## Overview
 
-This project explores the relationship between a galaxy’s recessional velocity and its distance from Earth to estimate the Hubble Constant (H₀). 
-The aim is to apply regression and visualization techniques from data mining to real astronomical data and compare the resulting H₀ estimate to accepted 
-cosmological values (~70 km/s/Mpc).  
+This project investigates the relationship between recession velocity and distance in the local universe in order to estimate the Hubble Constant ($H_0$). Using regression and visualization techniques from data mining, the project applies linear modeling to real astronomical observations and compares the resulting estimate of $H_0$ to established cosmological values (approximately 70 km s$^{-1}$ Mpc$^{-1}$).
 
-This topic was chosen because it bridges my astronomy background with the data-mining skills developed in INFO 523. 
-My self-taught component will be learning and applying linear regression to incorporate measurement uncertainty into the model.
+This topic was chosen because it bridges my background in astronomy with the data-mining methods developed in INFO 523. The project is designed to explore how simple regression models perform on real scientific data, as well as how assumptions and uncertainty influence scientific inference.
 
 ---
 
 ## Dataset
 
+The dataset used in this project consists of Type Ia supernova observations, including redshift-derived recession velocities and luminosity distances. The data are sourced from publicly available astronomical supernova compilations, such as the Pantheon+ dataset.
 
-The dataset used in this project contains observational data of nearby galaxies, including their recession velocities (km/s) and 
-distances (Mpc). It is sourced from publicly available astronomical catalogs, such as the
-NASA/IPAC Extragalactic Database (NED) or curated datasets on Kaggle (Galaxy Distance–Velocity Data).  
-
-I chose this dataset because it provides direct, measurable quantities for verifying Hubble's law, which links galaxy velocity to 
-distance. It’s small enough for reproducible analysis (typically 200 galaxies), but still captures meaningful variation across galaxies.  
+This dataset was selected because Type Ia supernovae serve as well-calibrated standard candles, making them well suited for studying the cosmic expansion rate. The dataset is large enough to support meaningful statistical analysis while still allowing for transparent and reproducible modeling.
 
 ```{python}
 #| label: load-dataset
 #| message: false
 import pandas as pd
-```
 
 
 ---
@@ -54,7 +46,7 @@ import pandas as pd
 
 Can a linear regression model accurately reproduce Hubble’s Law from observed galaxy data?
 How does incorporating uncertainty (weighted regression) affect the estimated value of the Hubble Constant?
-
+What limitations arise when applying simple linear models to cosmological data?
 
 ## Analysis plan
 
