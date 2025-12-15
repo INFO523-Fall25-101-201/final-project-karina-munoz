@@ -5,7 +5,7 @@ author:
   - name: "Karina Muñoz"
     affiliations:
       - name: College of Information Science, University of Arizona
-description: description: Estimating the Hubble Constant using Type Ia supernova distance–velocity data. 
+description: Estimating the Hubble Constant using Type Ia supernova distance–velocity data. 
 format:
    html:
     code-tools: true
