@@ -1,5 +1,5 @@
 ---
-title: "Hubble-Muñoz Estimationn"
+title: "Estimating the Hubble Constant using Type Ia supernova distance–velocity data."
 format: html
 editor: visual
 jupyter: python3
