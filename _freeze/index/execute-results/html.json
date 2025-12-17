@@ -1,9 +1,10 @@
 {
-  "hash": "0e6b82ab6a634a8b8dc925668c0f975c",
+  "hash": "805ff0574a7716b0d6ab20197d5b16fb",
   "result": {
-    "markdown": "---\ntitle: Project title\nsubtitle: INFO 523 - Project Final\nauthor: Team name\nformat: html\neditor: visual\n---\n\n## Abstract\n\nAdd project abstract here.\n\n",
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Estimation of Hubble Constant\"\nsubtitle: \"INFO 523 - Final Project\"\nauthor: \n  - name: \"Karina Muñoz\"\n    affiliations:\n      - name: College of Information Science, University of Arizona\ndescription: Estimating the Hubble Constant using Type Ia supernova distance–velocity data. \nformat:\n   html:\n    code-tools: true\n    code-overflow: wrap\n    embed-resources: true\neditor: visual\nexecute:\n  warning: false\n  echo: false\njupyter: python3\n---\n\n## Abstract\n\nThis project applies data mining and regression analysis techniques to estimate the Hubble Constant ($H_0$) using real astronomical distance–velocity data from Type Ia supernovae. Using publicly available supernova datasets, the analysis focuses on the low-redshift regime where the linear Hubble relation provides a physically meaningful approximation of cosmic expansion.\n\nThe data are cleaned, visualized, and modeled using Python libraries such as pandas and matplotlib, with linear regression used to estimate $H_0$ from the relationship between recession velocity and distance. Model performance is evaluated using goodness-of-fit metrics and residual analysis, and uncertainty in the estimated Hubble constant is assessed through comparison across redshift ranges.\n\nThe resulting estimate of $H_0$ is compared to published cosmological values (approximately 70 km s$^{-1}$ Mpc$^{-1}$), highlighting both the strengths and limitations of simple linear models in the local universe. This project demonstrates how data mining methods can be applied to real cosmological datasets while emphasizing the importance of model assumptions and uncertainty in scientific inference.\n\n",
     "supporting": [
-      "index_files"
+      "index_files/figure-html"
     ],
     "filters": [],
     "includes": {}

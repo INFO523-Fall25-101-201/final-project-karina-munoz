@@ -1,167 +1,194 @@
 ---
-title: "Project title"
-subtitle: "INFO 523 - Summer 2025 - Final Project"
-author: "Author names"
-title-slide-attributes:
-  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
-  data-background-size: stretch
-  data-background-opacity: "0.7"
-  data-slide-number: none
+title: "Estimating the Hubble Constant with Pantheon+ Supernovae"
+author: "Karina Munoz"
 format:
   revealjs:
-    theme:  ['data/customtheming.scss']
-  
-editor: visual
-jupyter: python3
+    theme: night
+    slide-number: true
+    incremental: false
+    css: slides.css
 execute:
   echo: false
+  warning: false
+  message: false
+resources:
+  - images
+title-slide-attributes:
+  data-background-image: images/JWSTDeep.png
+  data-background-opacity: "0.25"
+  data-background-size: cover
 ---
 
-```{python}
-#| label: load-packages
-#| include: false
+## Goal / Research Question {.smaller}
 
-# Load packages here
-import pandas as pd
-import seaborn as sns
+- What functional form best describes the relationship between distance and recession velocity?
+- How does a simple linear model compare to more flexible models?
+- Estimate the Hubble constant (H0) using supernova data
+- Evaluate whether a linear Hubble Law fits the data well
 
-```
+---
 
-```{python}
-#| label: setup
-#| include: false
-#| 
-# Set up plot theme and figure resolution
-sns.set_theme(style="whitegrid")
-sns.set_context("notebook", font_scale=1.1)
+## Dataset Summary {.smaller}
 
-import matplotlib.pyplot as plt
-plt.rcParams['figure.dpi'] = 300
-plt.rcParams['savefig.dpi'] = 300
-plt.rcParams['figure.figsize'] = (6, 6 * 0.618)
-```
+::: {.tiny}
+| Quantity | Value |
+|---|---|
+| Total supernovae | ~1700 |
+| Low-redshift subset (zHD < 0.1) | 645 |
+| Velocity range (km/s) | ~300 – 40,000 |
+| Luminosity distance range (Mpc) | ~1 – 1,600 |
+| Redshift (zHD) range | ~0.001 – 0.23 |
+:::
 
-```{python}
-#| label: load-data
-#| include: false
-# Load data in Python
-mtcars = sns.load_dataset('mpg').dropna()  # mtcars dataset is similar to the mpg dataset from seaborn
-mtcars['speed'] = mtcars['horsepower'] / mtcars['weight']
+::: {.smaller}
+Analysis focuses on the low-redshift subset where Hubble’s Law is expected to be approximately linear.
+:::
 
-penguins = sns.load_dataset('penguins').dropna()
-```
+---
 
-# Using Quarto for presentations
-
-## Quarto
-
--   The presentation is created using the Quarto CLI
-
--   `##` sets the start of a new slide
-
-## Layouts
-
-You can use plain text
+## Exploratory Data Analysis {.smaller}
 
 ::: columns
-::: {.column width="40%"}
--   or bullet points[^1]
+
+::: {.column width="55%"}
+- Strong positive relationship between distance and velocity  
+- Trend is approximately linear  
+- Scatter increases at larger distances  
 :::
 
-::: {.column width="60%"}
-or in two columns
+::: {.column width="45%"}
+![](images/Redshift_vs_Velocity.jpg){width=100%}
 :::
+
 :::
 
-[^1]: And add footnotes
+---
 
--   like
-
--   this
-
-## Code
-
-```{python}
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm
-import pandas as pd
-
-# Fit a linear regression model
-X = mtcars[['speed']]
-y = mtcars['mpg']
-model = LinearRegression().fit(X, y)
-
-# Summary of the model
-X2 = sm.add_constant(X)
-est = sm.OLS(y, X2)
-est2 = est.fit()
-print(est2.summary())
-```
-
-## Plots
-
-```{python}
-penguins['species'] = penguins['species'].apply(lambda x: "Adelie" if x == "Adelie" else "Other")
-sns.scatterplot(data=penguins, x='flipper_length_mm', y='body_mass_g', hue='species')
-plt.show()
-```
-
-## Plot and text
+## Residual Patterns from EDA {.smaller}
 
 ::: columns
-::: {.column width="50%"}
--   Some text
 
--   goes here
+::: {.column width="55%"}
+- Residuals centered near zero  
+- Mild systematic trend at larger distances  
+- LOWESS smoothing highlights slight curvature  
 :::
 
-::: {.column width="50%"}
-```{python}
-#| warning: false
-#| fig.width: 5.5
-fig, ax = plt.subplots(figsize=(5.5, 5.5 * 0.618))
-sns.boxplot(data=penguins, x='bill_length_mm', y='species', hue='species', ax=ax)
-plt.show()
-```
-:::
+::: {.column width="45%"}
+![](images/Residualfit1.jpg){width=100%}
 :::
 
-# A new section...
+:::
 
-## Tables
+---
 
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
+## Low-Redshift Model (zHD < 0.1) {.smaller}
 
-```{python}
-penguins.head().to_html()
-```
+::: {.smaller}
+- Analysis restricted to the low-redshift regime where Hubble’s Law is expected to be linear  
+- Linear regression fit is tighter than for the full dataset  
+- Estimated slope (Hubble constant):  
+  **\(H_0 \approx 64.6\ \text{km/s/Mpc}\)**  
 
-## Images
+**Interpretation**
+- Reduced scatter confirms linear behavior in the local universe  
+- Supports using a simple linear model to estimate \(H_0\)  
+:::
 
-![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"}
+---
 
-## Math Expressions {.smaller}
+## Higher-Redshift Behavior {.smaller}
 
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\\alpha+\\beta\$ renders $\alpha + \beta$. You can use the display style with double dollar signs:
+::: {.smaller}
+- At higher redshift, residual variance increases noticeably  
+- Linear trend remains present, but uncertainty grows  
+- Slope estimates become less stable due to:
+  - increasing distance uncertainty  
+  - cosmological effects beyond linear expansion  
 
-```         
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
+**Implication**
+- Higher-redshift data motivate cosmology-aware models  
+- Do not justify adding polynomial terms to the low-z model  
+:::
 
-$$
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-$$
+---
 
-Limitations:
+## Model Performance Comparison {.smaller}
 
-1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
+::: {.tiny}
+| Model | \(R^2\) | RMSE (km/s) | MAE (km/s) |
+|---|---|---|---|
+| Linear | 0.983 | 711 | 492 |
+| Quadratic | 0.986 | 7604 | 448 |
+:::
 
-2.  There should not be spaces after the opening `$` or before the closing `$`.
+::: {.smaller}
+Quadratic regression shows marginal metric improvements but introduces additional complexity.
+:::
 
-# Wrap up
+---
 
-## Feeling adventurous?
+## Residuals by Redshift {.smaller}
 
--   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
+::: columns
 
--   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.
+::: {.column width="48%"}
+- Residual variance increases with redshift  
+- Indicates non-constant error (heteroskedasticity)  
+- Expected due to growing distance uncertainty and reduced dominance of peculiar velocities  
+
+**Implication:**  
+Linear trend remains valid, but error structure suggests weighted modeling for future work.
+:::
+
+::: {.column width="52%"}
+![](images/residuals_by_redshift.jpg){width=110%}
+:::
+
+:::
+
+---
+
+## Why Does Curvature Appear? {.smaller}
+
+- Cosmological distance is not strictly linear:
+\[
+d_L = (1 + z) r(z)
+\]
+- Small departures are expected even at low redshift  
+- Residual structure reflects physical and observational effects  
+
+---
+
+## Model Interpretation & Justification {.smaller}
+
+::: {.smaller}
+**Interpretation**
+- Linear slope directly estimates the Hubble constant:  
+  \(H_0 \approx 64.6\ \text{km/s/Mpc}\)
+- Intercept reflects local velocity effects and calibration offsets
+
+**Justification**
+- Linear model captures the dominant trend with minimal complexity
+- Quadratic model offers only marginal metric gains
+- Added flexibility reduces interpretability and lacks physical motivation at low redshift
+
+**Final choice**
+- Linear regression provides the best balance of performance, interpretability, and theory
+:::
+
+---
+
+## Conclusion {.smaller}
+
+- Linear regression provides a strong fit to low-redshift Pantheon+ supernova data  
+- Estimated Hubble constant:  
+  **\(H_0 \approx 64.6\ \text{km/s/Mpc}\)**  
+- Residuals show increasing uncertainty at larger redshifts, but no evidence that added complexity improves the model  
+- For the local universe, a linear Hubble Law remains an effective and interpretable model
+
+
+
+
+
+ <small>AI was used for formatting, proofreading, and rephrasing for better fluidity, readability, and comprehension </small>

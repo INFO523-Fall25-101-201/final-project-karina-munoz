@@ -1,11 +1,11 @@
 ---
-title: "Project Title"
+title: "Estimation of Hubble Constant"
 subtitle: "INFO 523 - Final Project"
 author: 
-  - name: "Team name - Team member 1, Team member 2,..."
+  - name: "Karina Muñoz"
     affiliations:
-      - name: "College of Information Science, University of Arizona"
-description: "Project description"
+      - name: College of Information Science, University of Arizona
+description: Estimating the Hubble Constant using Type Ia supernova distance–velocity data. 
 format:
    html:
     code-tools: true
@@ -20,4 +20,8 @@ jupyter: python3
 
 ## Abstract
 
-Add project abstract here.
+This project applies data mining and regression analysis techniques to estimate the Hubble Constant ($H_0$) using real astronomical distance–velocity data from Type Ia supernovae. Using publicly available supernova datasets, the analysis focuses on the low-redshift regime where the linear Hubble relation provides a physically meaningful approximation of cosmic expansion.
+
+The data are cleaned, visualized, and modeled using Python libraries such as pandas and matplotlib, with linear regression used to estimate $H_0$ from the relationship between recession velocity and distance. Model performance is evaluated using goodness-of-fit metrics and residual analysis, and uncertainty in the estimated Hubble constant is assessed through comparison across redshift ranges.
+
+The resulting estimate of $H_0$ is compared to published cosmological values (approximately 70 km s$^{-1}$ Mpc$^{-1}$), highlighting both the strengths and limitations of simple linear models in the local universe. This project demonstrates how data mining methods can be applied to real cosmological datasets while emphasizing the importance of model assumptions and uncertainty in scientific inference.
